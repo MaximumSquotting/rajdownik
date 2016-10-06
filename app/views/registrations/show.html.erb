@@ -1,0 +1,54 @@
+<p>
+  <strong>Name:</strong>
+  <%= @registration.name %>
+</p>
+
+<p>
+  <strong>student_id</strong>
+  <%= @registration.student_id %>
+</p>
+
+<p>
+  <strong>accepted</strong>
+  <%= @registration.accepted %>
+</p>
+
+<p>
+  <strong>paid</strong>
+  <%= @registration.paid %>
+</p>
+
+<p>
+  <strong>attended</strong>
+  <%= @registration.attended %>
+</p>
+
+<p>
+  <strong>shirt_size</strong>
+  <%= @registration.shirt_size %>
+</p>
+
+<p>
+  <strong>female_shirt</strong>
+  <%= @registration.female_shirt %>
+</p>
+
+<p>
+  <strong>phone_number</strong>
+  <%= @registration.phone_number %>
+</p>
+
+<p>
+  <strong>departure_date</strong>
+  <%= @registration.departure_date %>
+</p>
+
+<p>s
+  <strong>arrival_date</strong>
+  <%= @registration.arrival_date %>
+</p>
+
+<p>
+  <td><%= link_to 'Back', registrations_path() %></td>
+  <td><%= link_to 'Edit', edit_registration_path() %></td>
+</p>
