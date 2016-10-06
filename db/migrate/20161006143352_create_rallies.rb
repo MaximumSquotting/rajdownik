@@ -1,11 +1,11 @@
 class CreateRallies < ActiveRecord::Migration[5.0]
   def change
     create_table :rallies do |t|
-      
-      t.string  :name
-      t.integer :attendees_limit
-      t.string  :start_date 
-      t.string  :end_date
+
+      t.string  :name, null: false
+      t.integer :attendees_limit, null: false
+      t.string  :start_date, null: false
+      t.string  :end_date, null: false
 
       t.timestamps
     end

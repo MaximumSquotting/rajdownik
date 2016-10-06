@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Rally, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  [ :name, :attendees_limit, :start_date, :end_date].each do |a|
+      it { is_expected.to validate_presence_of(a) }
+  end
 end

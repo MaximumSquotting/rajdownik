@@ -16,19 +16,19 @@ ActiveRecord::Schema.define(version: 20161006143352) do
   enable_extension "plpgsql"
 
   create_table "guardians", force: :cascade do |t|
-    t.string   "name"
-    t.string   "affilation"
-    t.string   "phone_number"
-    t.string   "email"
+    t.string   "name",         null: false
+    t.string   "affilation",   null: false
+    t.string   "phone_number", null: false
+    t.string   "email",        null: false
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
 
   create_table "rallies", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "attendees_limit"
-    t.string   "start_date"
-    t.string   "end_date"
+    t.string   "name",            null: false
+    t.integer  "attendees_limit", null: false
+    t.string   "start_date",      null: false
+    t.string   "end_date",        null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
