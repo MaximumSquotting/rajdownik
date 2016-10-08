@@ -9,8 +9,8 @@ class CreateRegistrations < ActiveRecord::Migration[5.0]
       t.string :shirt_size, null: false
       t.boolean :female_shirt, null: false, default: false
       t.string :phone_number, null: false
-      t.string :departure_date, null: false
-      t.string :arrival_date, null: false
+      t.string :departure_date, null: false, default: "NotKnowYet"
+      t.string :arrival_date, null: false, default: "NotKnowYet"
 
       t.timestamps
     end

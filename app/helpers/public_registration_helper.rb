@@ -1,0 +1,2 @@
+module PublicRegistrationHelper
+end

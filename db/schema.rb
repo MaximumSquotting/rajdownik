@@ -34,18 +34,18 @@ ActiveRecord::Schema.define(version: 20161006143352) do
   end
 
   create_table "registrations", force: :cascade do |t|
-    t.string   "name",                           null: false
-    t.string   "student_id",                     null: false
-    t.boolean  "accepted",       default: false, null: false
-    t.boolean  "paid",           default: false, null: false
-    t.boolean  "attended",       default: false, null: false
-    t.string   "shirt_size",                     null: false
-    t.boolean  "female_shirt",   default: false, null: false
-    t.string   "phone_number",                   null: false
-    t.string   "departure_date",                 null: false
-    t.string   "arrival_date",                   null: false
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.string   "name",                                  null: false
+    t.string   "student_id",                            null: false
+    t.boolean  "accepted",       default: false,        null: false
+    t.boolean  "paid",           default: false,        null: false
+    t.boolean  "attended",       default: false,        null: false
+    t.string   "shirt_size",                            null: false
+    t.boolean  "female_shirt",   default: false,        null: false
+    t.string   "phone_number",                          null: false
+    t.string   "departure_date", default: "NotKnowYet", null: false
+    t.string   "arrival_date",   default: "NotKnowYet", null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
   end
 
 end

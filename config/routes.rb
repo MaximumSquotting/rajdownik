@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :guardians
   resources :rallies
 
-  root 'reigstration#index'
+  get  'public_registrations/new'
+  root 'public_registrations#new'
 end
