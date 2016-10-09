@@ -11,6 +11,7 @@ class PublicRegistrationsController < ApplicationController
   def create
     @public_registration = Registration.new(public_registration_params)
     if @public_registration.save
+      redirect_to "/"
     else
       render 'new'
     end

@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   resources :registrations
   resources :guardians
   resources :rallies
-
+  
+  post 'registrations' => 'public_registrations#create'
   get  'public_registrations/new'
   root 'public_registrations#new'
 end

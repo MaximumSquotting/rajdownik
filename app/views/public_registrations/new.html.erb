@@ -1,1 +1,1 @@
-<%= render "form", registration: @public_registration %>
+<%= render "form", registration: @public_registration, :url => url_for(:controller => 'public_registrations', :action => 'create') %>
