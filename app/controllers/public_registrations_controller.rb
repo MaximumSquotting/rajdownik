@@ -11,7 +11,7 @@ class PublicRegistrationsController < ApplicationController
   def create
     @public_registration = Registration.new(public_registration_params)
     if @public_registration.save
-      redirect_to "/"
+      redirect_to register_path, notice: t(:successful_registeration)
     else
       render 'new'
     end
@@ -20,7 +20,7 @@ class PublicRegistrationsController < ApplicationController
 
   private
   def public_registration_params
-    params.require(:public_registration).permit(:name, :student_id, :shirt_size,
+    params.require(:registration).permit(:name, :student_id, :shirt_size,
      :phone_number)
   end
 
