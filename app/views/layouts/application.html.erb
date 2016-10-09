@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Rajd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,9 +10,9 @@
   </head>
 
   <body>
-    <% flash.each do |name, msg| -%>
-      <%= content_tag :div, msg, class: name %>
-    <% end -%>
-    <%= yield %>
+    <div class="container vertical-center">
+      <% flash_messages %>
+      <%= yield %>
+      </div><!-- /.container -->
   </body>
 </html>
