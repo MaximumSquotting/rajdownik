@@ -1,0 +1,19 @@
+<p>
+All rallies
+<td><%= link_to 'New', new_rally_path() %></td>
+
+</p>
+
+<% @rally.each do |r| %>
+  <tr>
+    <td><%= r.name %></td>
+    <td><%= r.attendees_limit %></td>
+    <td><%= r.start_date %></td>
+    <td><%= r.end_date %></td>
+    <td><%= link_to 'Show', rally_path(r) %></td>
+    <td><%= link_to 'Edit', edit_rally_path(r) %></td>
+    <td><%= link_to 'Destroy', rally_path(r),
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>

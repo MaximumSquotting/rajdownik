@@ -1,0 +1,25 @@
+<p>
+All registrations
+<td><%= link_to 'New', new_registration_path() %></td>
+
+</p>
+
+<% @registration.each do |r| %>
+  <tr>
+    <td><%= r.name %></td>
+    <td><%= r.student_id %></td>
+    <td><%= r.accepted %></td>
+    <td><%= r.paid %></td>
+    <td><%= r.attended %></td>
+    <td><%= r.shirt_size %></td>
+    <td><%= r.female_shirt %></td>
+    <td><%= r.phone_number %></td>
+    <td><%= r.departure_date %></td>
+    <td><%= r.arrival_date %></td>
+    <td><%= link_to 'Show', registration_path(r) %></td>
+    <td><%= link_to 'Edit', edit_registration_path(r) %></td>
+    <td><%= link_to 'Destroy', registration_path(r),
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>

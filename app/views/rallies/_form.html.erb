@@ -1,0 +1,38 @@
+<%= form_for(rally) do |f| %>
+  <% if rally.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(rally.errors.count, "error") %> prohibited this rally from being saved:</h2>
+
+    <ul>
+    <% rally.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :attendees_limit %><br>
+    <%= f.text_field :attendees_limit %>
+  </p>
+
+  <p>
+    <%= f.label :start_date %><br>
+    <%= f.text_field :start_date %>
+  </p>
+
+  <p>
+    <%= f.label :end_date %><br>
+    <%= f.text_field :end_date %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<td><%= link_to 'Back', rallies_path() %></td>
