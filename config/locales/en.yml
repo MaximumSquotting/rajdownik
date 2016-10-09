@@ -20,4 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  buttons:
+    submit: "Submit"
+  form_confirmation: "Do you wish to submit the form? If you make any mistakes you'll have to contact Student Council"
+  registration_confirmation: "Your registration was successful. You can register another person by using his or her student's id number."
+  placeholders:
+    name: "Your full name"

@@ -1,6 +1,7 @@
 class PublicRegistrationsController < ApplicationController
 
   def new
+    @shirt_sizes = %w( XS S M L XL XXL ).map { |size| [size, size] }
     @public_registration = Registration.new
   end
 
@@ -21,7 +22,7 @@ class PublicRegistrationsController < ApplicationController
   private
   def public_registration_params
     params.require(:registration).permit(:name, :student_id, :shirt_size,
-     :phone_number)
+      :female_shirt, :phone_number)
   end
 
 end

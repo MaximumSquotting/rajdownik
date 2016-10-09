@@ -1,3 +1,24 @@
 pl:
+  public_registrations:
+    new:
+      header: "Rejestracja na Rajd IZetu"
+  activerecord:
+    models:
+      registration: Rejestracja
+    attributes:
+      registration:
+        name: "Imię i nazwisko"
+        student_id: "Numer indeksu"
+        shirt_size: "Rozmiar koszulki"
+        female_shirt: "Rozmiarówka damska"
+        phone_number: "Numer telefonu"
+  buttons:
+    submit: "Zarejestruj się"
+  form_confirmation: "Wysłać formularz? W razie pomyłki musisz skontaktować się z Samorządem Wydziału Informatyki i Zarządzania"
+  registration_confirmation: "Twoja rejestracja przebiegła pomyślnie, w razie potrzeby możesz użyć tego formularza by zapisać kogoś z innym numerem indeksu."
+  placeholders:
+    name: "Twoje pełne imię"
+    student_id: "np. 123456"
+    phone_number: "Twój numer telefonu"
   successful_registeration: "Twoja rejestracja przebiegła pomyślnie,
    można dokonać kolejnej rejestracji używając innego numeru indeksu"
