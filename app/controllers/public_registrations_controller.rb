@@ -1,8 +1,8 @@
 class PublicRegistrationsController < ApplicationController
 
   def new
-    @shirt_sizes = %w( XS S M L XL XXL ).map { |size| [size, size] }
-    @public_registration = Registration.new
+    @shirt_sizes = %w( S M L XL XXL ).map { |size| [size, size] }
+    @public_registration = Rally.last.registrations.build
   end
 
   def index

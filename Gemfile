@@ -15,6 +15,11 @@ gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
 gem 'devise'
 gem 'rails_admin', '~> 1.0'
 
+gem 'capistrano', '~> 3.4.0'
+gem 'capistrano-bundler', '~> 1.1.2'
+gem 'capistrano-rails', '~> 1.1.1'
+gem 'capistrano-rbenv', github: 'capistrano/rbenv'
+
 group :development, :test do
   gem 'pry'
   gem 'byebug'
