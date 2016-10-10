@@ -4,7 +4,9 @@ pl:
       header: "Rejestracja na Rajd IZetu"
   activerecord:
     models:
-      registration: Rejestracja
+      registration: "Rejestracja"
+      rally: "Edycja rajdu"
+      guardian: "Opiekun"
     attributes:
       registration:
         name: "Imię i nazwisko"
@@ -12,6 +14,9 @@ pl:
         shirt_size: "Rozmiar koszulki"
         female_shirt: "Rozmiarówka damska"
         phone_number: "Numer telefonu"
+        accepted: "Przyjęty?"
+        paid: "Opłacona?"
+        attended: "Czy uczestniczył?"
   buttons:
     submit: "Zarejestruj się"
   form_confirmation: "Wysłać formularz? W razie pomyłki musisz skontaktować się z Samorządem Wydziału Informatyki i Zarządzania"
