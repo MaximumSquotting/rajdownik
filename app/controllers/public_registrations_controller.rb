@@ -20,7 +20,7 @@ class PublicRegistrationsController < ApplicationController
 
   private
   def public_registration_params
-    params.require(:registration).permit(:name, :student_id, :shirt_size,
+    params.require(:registration).permit(:name, :surname, :student_id, :shirt_size,
       :female_shirt, :phone_number)
   end
 

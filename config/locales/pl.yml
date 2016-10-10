@@ -1,4 +1,6 @@
 pl:
+  errors:
+    student_id_not_unique: "został już użyty"
   public_registrations:
     new:
       header: "Rejestracja na Rajd IZetu"
