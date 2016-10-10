@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+gem 'rails-i18n', '~> 5.0.0'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
@@ -13,6 +14,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
 gem 'devise'
+gem 'devise-i18n'
 gem 'rails_admin', '~> 1.0'
 
 gem 'capistrano', '~> 3.4.0'
