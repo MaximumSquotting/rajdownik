@@ -3,7 +3,7 @@ set :application, 'rajdownik'
 set :repo_url, 'git@github.com:MaximumSquotting/rajdownik.git'
 set :deploy_to, '/home/deploy/rajdownik'
 set :linked_files, %w{config/database.yml config/secrets.yml}
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 namespace :deploy do
   desc 'Restart application'
