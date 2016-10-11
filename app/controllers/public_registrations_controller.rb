@@ -1,7 +1,7 @@
 class PublicRegistrationsController < ApplicationController
 
   def new
-    @public_registration = Rally.last.registrations.build
+    @public_registration = Registration.new
   end
 
   def index
@@ -9,7 +9,7 @@ class PublicRegistrationsController < ApplicationController
   end
 
   def create
-    @public_registration = Registration.new(public_registration_params)
+    @public_registration = Rally.last.registrations.build(public_registration_params)
     if @public_registration.save
       redirect_to register_path, notice: t(:successful_registeration)
     else
@@ -21,7 +21,7 @@ class PublicRegistrationsController < ApplicationController
   private
   def public_registration_params
     params.require(:registration).permit(:name, :surname, :student_id, :shirt_size,
-      :female_shirt, :phone_number)
+      :female_shirt, :phone_number, :rally_id)
   end
 
 end
