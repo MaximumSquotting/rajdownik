@@ -16,6 +16,7 @@ gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
 gem 'devise'
 gem 'devise-i18n'
 gem 'rails_admin', '~> 1.0'
+gem 'simple-spreadsheet'
 
 gem 'capistrano', '~> 3.4.0'
 gem 'capistrano-bundler', '~> 1.1.2'
