@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161011081947) do
+ActiveRecord::Schema.define(version: 20161018124955) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,9 @@ ActiveRecord::Schema.define(version: 20161011081947) do
     t.integer  "rally_id"
     t.string   "surname"
     t.string   "preferred_departure_time"
+    t.boolean  "accepted_terms",           default: false, null: false
+    t.boolean  "signed_declaration",       default: false, null: false
+    t.string   "additional_notes"
     t.index ["rally_id"], name: "index_registrations_on_rally_id", using: :btree
   end
 
