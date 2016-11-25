@@ -40,12 +40,13 @@ class RalliesController < ApplicationController
     @rally = Rally.find(params[:id])
     @rally.destroy
 
-    redirect_to rallyes_path
+    redirect_to rallies_path
   end
 
   private
   def rally_params
-    params.require(:rally).permit(:name, :attendees_limit, :start_date, :end_date)
+    params.require(:rally).permit(:name, :attendees_limit, :start_date,
+    :end_date, :student_ids)
   end
 
 end
