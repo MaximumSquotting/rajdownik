@@ -1,8 +1,8 @@
 class ConfirmController < ApplicationController
   def confirm
-    binding.pry
-    @registration = Registration.find(:student_id)
-    #@registration.accepted = true
-    #@registration.accepted_terms = true
+    @registration = Registration.where(params[:student_id])
+    @registration.last.accepted == 'true'
+    @registration.last.accepted_terms == 'true'
+    @registration.last.save
   end
 end

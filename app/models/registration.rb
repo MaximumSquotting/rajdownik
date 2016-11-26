@@ -2,7 +2,6 @@ class Registration < ApplicationRecord
   def check_id
     found = false
     s = SimpleSpreadsheet::Workbook.read(rally.student_ids.path)
-    binding.pry
     s.selected_sheet = s.sheets.first
     s.first_row.upto(s.last_row) do |line|
       known_id = s.cell(line, 1)[-6..-1]

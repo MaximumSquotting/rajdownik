@@ -14,6 +14,11 @@
 </p>
 
 <p>
+  <strong>accepted_terms</strong>
+  <td><%= @registration.accepted_terms %></td>
+</p>
+
+<p>
   <strong>paid</strong>
   <%= @registration.paid %>
 </p>
@@ -38,15 +43,6 @@
   <%= @registration.phone_number %>
 </p>
 
-<p>
-  <strong>departure_date</strong>
-  <%= @registration.departure_date %>
-</p>
-
-<p>s
-  <strong>arrival_date</strong>
-  <%= @registration.arrival_date %>
-</p>
 
 <p>
   <td><%= link_to 'Back', registrations_path() %></td>
