@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get  '/success', to: "pages#success"
   post '/register' => 'public_registrations#create'
   post '/confirm' => 'confirm#confirm'
+  get  '/confirm' => 'confirm#confirm'
   get  '/register', to: "public_registrations#new"
   root 'public_registrations#new'
 end
