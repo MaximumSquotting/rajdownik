@@ -5,6 +5,9 @@ pl:
   public_registrations:
     new:
       header: "Rejestracja na Rajd IZetu"
+  confirm:
+    index:
+      confirm: "confirm"
   activerecord:
     models:
       registration: "Rejestracja"
