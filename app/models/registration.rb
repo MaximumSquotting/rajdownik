@@ -1,10 +1,11 @@
 class Registration < ApplicationRecord
   def check_id
+    binding.pry
     found = false
     s = SimpleSpreadsheet::Workbook.read(rally.student_ids.path)
     s.selected_sheet = s.sheets.first
     s.first_row.upto(s.last_row) do |line|
-      known_id = s.cell(line, 1)[-6..-1]
+      known_id = s.cell(line, 2)[-6..-1]
       if known_id == student_id
         found = true
         break
