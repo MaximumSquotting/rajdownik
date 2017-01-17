@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Registration, type: :model do
-  [:name, :student_id,
-   :shirt_size, :phone_number, :departure_date, :arrival_date].each do |a|
-    it { is_expected.to validate_presence_of(a) }
+  let!(:rally) { FactoryGirl.create(:rally) }
+  subject(:registration) { FactoryGirl.build_stubbed(:registration, rally: rally) }
+  %i(name surname student_id phone_number).each do |attribute|
+    it { is_expected.to validate_presence_of(attribute) }
   end
 end

@@ -17,6 +17,11 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'rails_admin', '~> 1.0'
 gem 'simple-spreadsheet'
+gem 'dotenv-rails'
+
+group :development do
+  gem 'web-console'
+end
 
 group :development, :test do
   gem 'pry'
@@ -27,7 +32,6 @@ group :development, :test do
   gem 'rubocop'
   gem 'bullet'
   gem 'rspec-rails'
-  gem 'web-console'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
