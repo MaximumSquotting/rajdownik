@@ -1,5 +1,4 @@
 class GuardiansController < ApplicationController
-
   def new
     @guardian = Guardian.new
   end
@@ -44,8 +43,8 @@ class GuardiansController < ApplicationController
   end
 
   private
+
   def guardian_params
     params.require(:guardian).permit(:name, :affilation, :phone_number, :email)
   end
-
 end

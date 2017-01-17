@@ -1,6 +1,5 @@
 class Registration < ApplicationRecord
   def check_id
-    binding.pry
     found = false
     s = SimpleSpreadsheet::Workbook.read(rally.student_ids.path)
     s.selected_sheet = s.sheets.first

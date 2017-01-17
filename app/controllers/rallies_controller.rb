@@ -1,5 +1,4 @@
 class RalliesController < ApplicationController
-
   def new
     @rally = Rally.new
   end
@@ -44,9 +43,9 @@ class RalliesController < ApplicationController
   end
 
   private
+
   def rally_params
     params.require(:rally).permit(:name, :attendees_limit, :start_date,
-    :end_date, :student_ids)
+                                  :end_date, :student_ids)
   end
-
 end
