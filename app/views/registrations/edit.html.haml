@@ -1,0 +1,4 @@
+= render "form", registration: @registration
+%td= link_to 'Destroy', registration_path(), |
+    method: :delete,                        |
+    data: { confirm: 'Are you sure?' }      |

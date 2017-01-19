@@ -1,0 +1,19 @@
+%p
+  All registrations
+  %td= link_to 'New', new_registration_path()
+- @registration.each do |r|
+  %tr
+    %td= r.name
+    %td= r.student_id
+    %td= r.accepted
+    %td= r.accepted_terms
+    %td= r.paid
+    %td= r.attended
+    %td= r.shirt_size
+    %td= r.female_shirt
+    %td= r.phone_number
+    %td= link_to 'Show', registration_path(r)
+    %td= link_to 'Edit', edit_registration_path(r)
+    %td= link_to 'Destroy', registration_path(r), |
+        method: :delete,                         |
+        data: { confirm: 'Are you sure?' }       |

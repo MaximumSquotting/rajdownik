@@ -1,0 +1,18 @@
+%p
+  %strong Name:
+  = @guardian.name
+%p
+  %strong Affilation
+  = @guardian.affilation
+%p
+  %strong phone_number
+  = @guardian.phone_number
+%p
+  %strong email
+  = @guardian.email
+%p
+  %td= link_to 'Back', guardians_path()
+  %td= link_to 'Edit', edit_guardian_path()
+  %td= link_to 'Destroy', guardian_path(), |
+      method: :delete,                    |
+      data: { confirm: 'Are you sure?' }  |

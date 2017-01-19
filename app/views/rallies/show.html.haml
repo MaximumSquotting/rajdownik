@@ -1,0 +1,18 @@
+%p
+  %strong Name:
+  = @rally.name
+%p
+  %strong attendees_limit
+  = @rally.attendees_limit
+%p
+  %strong start_date
+  = @rally.start_date
+%p
+  %strong end_date
+  = @rally.end_date
+%p
+  %td= link_to 'Back', rallies_path()
+  %td= link_to 'Edit', edit_rally_path()
+  %td= link_to 'Destroy', rally_path(),   |
+      method: :delete,                   |
+      data: { confirm: 'Are you sure?' } |

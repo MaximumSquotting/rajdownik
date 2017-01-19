@@ -1,0 +1,33 @@
+%p
+  %strong Name:
+  = @registration.name
+%p
+  %strong student_id
+  = @registration.student_id
+%p
+  %strong accepted
+  = @registration.accepted
+%p
+  %strong accepted_terms
+  %td= @registration.accepted_terms
+%p
+  %strong paid
+  = @registration.paid
+%p
+  %strong attended
+  = @registration.attended
+%p
+  %strong shirt_size
+  = @registration.shirt_size
+%p
+  %strong female_shirt
+  = @registration.female_shirt
+%p
+  %strong phone_number
+  = @registration.phone_number
+%p
+  %td= link_to 'Back', registrations_path()
+  %td= link_to 'Edit', edit_registration_path()
+  %td= link_to 'Destroy', registration_path(), |
+      method: :delete,                        |
+      data: { confirm: 'Are you sure?' }      |

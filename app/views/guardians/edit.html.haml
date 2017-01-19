@@ -1,0 +1,4 @@
+= render "form", guardian: @guardian
+%td= link_to 'Destroy', guardian_path(), |
+    method: :delete,                    |
+    data: { confirm: 'Are you sure?' }  |

@@ -1,0 +1,28 @@
+= form_for(guardian) do |f|
+  - if guardian.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(guardian.errors.count, "error")
+        prohibited this guardian from being saved:
+      %ul
+        - guardian.errors.full_messages.each do |message|
+          %li= message
+  %p
+    = f.label :name
+    %br/
+    = f.text_field :name
+  %p
+    = f.label :affilation
+    %br/
+    = f.text_field :affilation
+  %p
+    = f.label :phone_number
+    %br/
+    = f.text_field :phone_number
+  %p
+    = f.label :email
+    %br/
+    = f.text_field :email
+  %p
+    = f.submit
+%td= link_to 'Back', guardians_path()

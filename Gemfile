@@ -18,6 +18,7 @@ gem 'devise-i18n'
 gem 'rails_admin', '~> 1.0'
 gem 'simple-spreadsheet'
 gem 'dotenv-rails'
+gem 'haml-rails', '~> 0.9'
 
 group :development do
   gem 'web-console'

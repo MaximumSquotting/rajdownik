@@ -1,0 +1,14 @@
+%p
+  All guardians
+  %td= link_to 'New', new_guardian_path()
+- @guardian.each do |r|
+  %tr
+    %td= r.name
+    %td= r.affilation
+    %td= r.phone_number
+    %td= r.email
+    %td= link_to 'Show', guardian_path(r)
+    %td= link_to 'Edit', edit_guardian_path(r)
+    %td= link_to 'Destroy', guardian_path(r), |
+        method: :delete,                     |
+        data: { confirm: 'Are you sure?' }   |
