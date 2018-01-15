@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RalliesController < ApplicationController
   def new
     @rally = Rally.new

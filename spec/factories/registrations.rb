@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryGirl.define do
   factory :registration do
     name "Michał Zając"
@@ -10,7 +12,7 @@ FactoryGirl.define do
     accepted_terms false
     signed_declaration false
     additional_notes "Totalny oszołom"
-    phone_number 530939555
+    phone_number 530_939_555
     association :rally
   end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 role :app, %w{deploy@46.101.127.188}
 role :web, %w{deploy@46.101.127.188}
 

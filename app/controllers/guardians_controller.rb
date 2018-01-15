@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class GuardiansController < ApplicationController
   def new
     @guardian = Guardian.new

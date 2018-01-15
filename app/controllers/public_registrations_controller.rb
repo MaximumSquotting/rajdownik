@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PublicRegistrationsController < ApplicationController
   def new
     @public_registration = Registration.new

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Registration < ApplicationRecord
   validates :name, :surname, :rally, :shirt_size, presence: true
   validates :phone_number, presence: true, numericality: { only_integer: true }
@@ -10,7 +12,7 @@ class Registration < ApplicationRecord
     s = SimpleSpreadsheet::Workbook.read(rally.student_ids.path)
     s.selected_sheet = s.sheets.first
     s.first_row.upto(s.last_row) do |line|
-      #known_id = s.cell(line, 2)[-6..-1]
+      # known_id = s.cell(line, 2)[-6..-1]
       known_id = s.cell(line, 1).to_s[-6..-1]
       if known_id == student_id
         found = true

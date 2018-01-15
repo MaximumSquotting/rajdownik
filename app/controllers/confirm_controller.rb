@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ConfirmController < ApplicationController
   def confirm
     @registration = Registration.where(student_id: params["student_id"]).last
